@@ -22,7 +22,7 @@ module Todo
     #
     config.middleware.insert_before "ActionDispatch::Static", "Rack::Cors" do
       allow do
-        origins 'http://shrouded-meadow-9190.herokuapp.com'
+        origins 'http://shrouded-meadow-9190.herokuapp.com', 'http://localhost:8000'
         resource '*', :headers => :any, :methods => [:get, :post, :options, :patch, :put, :delete]
       end
     end
