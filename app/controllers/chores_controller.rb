@@ -16,14 +16,14 @@ class ChoresController < ApplicationController
    @chore = Chore.find(params[:id])
    @chore.update(chore_params)
 
-    render json: 'ok'
+    render json: @chore
   end
 
   def destroy
    @chore = Chore.find(params[:id])
    @chore.destroy
 
-   render json: 'ok'
+    render json: @chore
   end
 
   private
